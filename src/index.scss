@@ -1,0 +1,93 @@
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,700;1,300;1,400&family=Roboto:ital,wght@0,100;0,400;0,500;1,500&display=swap");
+
+body {
+  background-color: whitesmoke;
+  font-family: "Roboto", sans-serif;
+}
+
+.btn {
+  padding: 0.35rem 1rem;
+  margin: auto 0.15rem;
+  background-color: orange;
+  border: none;
+  border-radius: 2px;
+  transition: ease-in-out;
+  color: white;
+
+  &.btn-basket {
+    background-color: rgb(146, 146, 146);
+  }
+
+  &:hover {
+    transform: scale(1.02);
+  }
+}
+
+.book {
+  display: grid;
+  place-items: center;
+  // border: 1px solid rgb(128, 128, 128);
+  box-shadow: 0px 0px 15px rgba(194, 194, 194, 0.287);
+
+  width: 270px;
+  height: auto;
+  border-radius: 10px;
+  padding: 1rem;
+  // margin: 2rem;
+  text-align: center;
+  background-color: #fff;
+  transition: 0.05s ease-in-out;
+  img {
+    margin-bottom: 0.5rem;
+
+    border: none;
+    height: 200px;
+  }
+  h3 {
+    color: rgb(39, 39, 39);
+    margin-top: 0.5rem;
+    font-weight: 500;
+    // font-size: 1.05rem;
+  }
+  .author {
+    margin: 0.5rem auto;
+    font-size: 1.1rem;
+    font-weight: 300;
+  }
+
+  &:hover {
+    // background-color: #e9e7e7;
+    transform: scale(1.05);
+
+    transform: rotateY("180deg");
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.287);
+  }
+}
+
+.bookList {
+  // grid-template-columns: repeat(4, 1fr);
+  width: 95vw;
+  max-width: 1170px;
+  display: grid;
+  margin: 5rem auto;
+  gap: 2rem;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+}
+
+@media only screen and (max-width: 600px) {
+  body {
+    background-color: rgb(189, 189, 189);
+  }
+  .booklist {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
